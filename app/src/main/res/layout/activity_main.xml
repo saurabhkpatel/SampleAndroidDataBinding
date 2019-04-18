@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+                name="user"
+                type="com.saurabhpatel.sampledatabinding.User"/>
+    </data>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="20dp"
+
+            app:layout_behavior="test"
+            tools:context=".MainActivity"
+            tools:showIn="@layout/activity_main">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{user.nameObservableField}"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{user.email}"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{user.f1}"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{user.f2}"/>
+        <Button
+                android:text="Button"
+                android:layout_width="match_parent"
+                android:onClick="onClickBtn"
+                android:layout_height="wrap_content"
+                android:id="@+id/button"/>
+
+        <Button
+                android:text="Global Change"
+                android:layout_width="match_parent"
+                android:onClick="onClickNotifyChange"
+                android:layout_height="wrap_content"
+                android:id="@+id/button1"/>
+
+    </LinearLayout>
+</layout>
